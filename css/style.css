@@ -1,0 +1,177 @@
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #000428, #004e92);
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    #container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, #000428, #004e92);
+        color: #ffffff;
+        font-size: 18px;
+        z-index: 1000;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #score-display {
+        margin: 0;
+        flex-grow: 1;
+        text-align: left;
+        margin-left: 10%;
+        font-size: 18px;
+    }
+
+    #level-display {
+        font-size: 18px;
+        margin: 0;
+        flex-grow: 1;
+        text-align: right;
+    }
+
+    #status {
+        font-size: 18px;
+        color: white;
+        margin-right: 10%;
+    }
+
+    #status.gameOverClass {
+        color: red;
+        transition: color 0.5s ease;
+    }
+
+    .gamestatus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+
+    #game {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto;
+        background: linear-gradient(to bottom, #000428, #004e92);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .btn {
+        width: 150px;
+        height: 150px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+        font-weight: bold;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+    }
+
+    .btn:hover {
+        animation: pulse 0.3s ease-in-out;
+        filter: brightness(1.2);
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3), 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn:active {
+        transform: scale(1.1);
+        box-shadow: 0 8px rgba(0, 0, 0, 0.7);
+        filter: brightness(1.5);
+    }
+
+    .green {
+        background: linear-gradient(to top, #32CD32, #7fff7d);
+        box-shadow: 0 4px #1f6426;
+    }
+
+    .green:active {
+        background: linear-gradient(to top, #2a7b35, #6fde6b);
+    }
+
+    .red {
+        background: linear-gradient(to top, #FF0000, #ff6b82);
+        box-shadow: 0 4px #7b1128;
+    }
+
+    .red:active {
+        background: linear-gradient(to top, #921a32, #e65b72);
+    }
+
+    .blue {
+        background: linear-gradient(to top, #007BFF, #6b96ff);
+        box-shadow: 0 4px #112b7b;
+    }
+
+    .blue:active {
+        background: linear-gradient(to top, #1a32a2, #5b86e6);
+    }
+
+    .yellow {
+        background: linear-gradient(to top, #FFDD00, #ffe96b);
+        box-shadow: 0 4px #7b7011;
+    }
+
+    .yellow:active {
+        background: linear-gradient(to top, #a2951a, #e6d55b);
+    }
+
+    .order {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button#start {
+        color: #00d4ff;
+        border: 2px solid #00d4ff;
+        padding: 15px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: linear-gradient(to right, #1a3c73, #2b529e);
+    }
+
+    button#start:hover {
+        /* background-color: rgba(0, 212, 255, 0.2); */
+        background: linear-gradient(to right, #00bcd4, #03a9f4);
+        ;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        color: #000000;
+    }
+
+    button#start:active {
+        transform: scale(0.95);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    #start:focus {
+        outline: 2px solid #ffffff;
+        outline-offset: 4px;
+    }
